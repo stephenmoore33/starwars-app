@@ -45,7 +45,8 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'view.html')));
 
 app.get('/add', (req, res) => res.sendFile(path.join(__dirname, 'add.html')));
 
-applicationCache.get('/about', (req, rest) => res.send("This is the about page."));
+app.get('/about', (req, res) => res.sendFile("This is the about page."));
+
 // Displays all characters
 app.get('/api/characters', (req, res) => res.json(characters));
 
